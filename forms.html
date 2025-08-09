@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body>
+
+    <h1>Event Registration</h1>
+
+    <form action="submit.php" method="post">
+        <fieldset>
+            <legend>Attendee Information</legend>
+
+            <p>
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g., 123-456-7890" required>
+            </p>
+
+            <p>
+                <label for="attendees">Number of Attendees:</label><br>
+                <input type="number" id="attendees" name="attendees" min="1" max="10" required>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Event Details</legend>
+
+            <p>
+                <label for="eventDate">Event Date:</label><br>
+                <input type="date" id="eventDate" name="eventDate" min="2025-08-10" required>
+            </p>
+
+            <p>
+                <label for="eventTime">Event Time:</label><br>
+                <input type="time" id="eventTime" name="eventTime" required>
+            </p>
+
+            <p>
+                <label for="eventType">Event Type:</label><br>
+                <select id="eventType" name="eventType" required>
+                    <option value="" disabled selected>Select an event type</option>
+                    <option value="conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="webinar">Webinar</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <p>
+                Dietary Restrictions:<br>
+                <input type="checkbox" id="vegetarian" name="dietary" value="vegetarian">
+                <label for="vegetarian">Vegetarian</label><br>
+                <input type="checkbox" id="glutenFree" name="dietary" value="gluten-free">
+                <label for="glutenFree">Gluten-Free</label>
+            </p>
+
+            <p>
+                T-shirt Size:<br>
+                <input type="radio" id="sizeS" name="tshirtSize" value="S" required>
+                <label for="sizeS">S</label><br>
+                <input type="radio" id="sizeM" name="tshirtSize" value="M">
+                <label for="sizeM">M</label><br>
+                <input type="radio" id="sizeL" name="tshirtSize" value="L">
+                <label for="sizeL">L</label><br>
+                <input type="radio" id="sizeXL" name="tshirtSize" value="XL">
+                <label for="sizeXL">XL</label>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <p>
+                <label for="comments">Comments/Questions:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50" maxlength="250"></textarea>
+            </p>
+        </fieldset>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>
