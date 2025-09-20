@@ -1,0 +1,30 @@
+#redbutton {
+    background-color: red;
+    color: bisque;
+}
+
+#redbutton:hover {
+    background-color: brown;
+
+}
+
+#bluebutton{
+    background-color: blue;
+    color: black;
+}
+#bluebutton:hover{
+    background-color: blueviolet;
+
+}
+
+#greenbutton{
+    background-color: green;
+    color: black;
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+#greenbutton:hover{
+    background-color: greenyellow;
+    transform: scale(1.3);
+}
